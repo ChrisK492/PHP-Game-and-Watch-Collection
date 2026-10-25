@@ -1,0 +1,212 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Bitcount Grid Double", system-ui;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* achtergrond laag */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    filter:  brightness(0.8);
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+.plaatje {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 3px solid black;
+}
+
+#side-en-body {
+    display: flex;
+}
+
+#side-bar {
+    background-color: #0b0b0f;
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.side-bar-links {
+    transition: 0.2s;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(20px, 4vw, 20px);
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: rgba(27, 27, 27, 0.903);
+    }
+
+}
+
+.active-link {
+    color: grey !important;
+}
+
+#container {
+    background-color: #fff7ee;
+    margin: auto;
+    border: 5px solid black;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#plaatje_en_tekst_container {
+    display: flex;
+
+}
+
+#card {
+    display: flex;
+    gap: 15px;
+    margin: 10px;
+    background-color: rgb(241, 241, 241);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.buttons {
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.shared-btn-style {
+    color: white;
+    transition: 0.2s;
+    margin: 10px;
+    padding: 5px;
+
+    &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+}
+
+#meerinfoknop {
+    background-color: rgb(82, 135, 242);
+    border: 2px solid black;
+
+    &:hover {
+        background-color: rgb(27, 80, 187);
+    }
+}
+
+#wijzigknop {
+    background-color: rgb(233, 172, 4);
+    border: 2px solid black;
+
+    &:hover {
+        background-color: rgb(165, 132, 39);
+    }
+}
+
+#verwijderknop {
+    background-color: rgb(198, 7, 7);
+    border: 2px solid black;
+
+    &:hover {
+        background-color: rgb(130, 0, 0);
+    }
+}
+
+/* einde homepage, begin meerinfo page */
+
+
+#info-schema {
+    display: block;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff7ee;
+    border: 3px solid black;
+    width: 40%;
+    height: fit-content;    
+    align-items: flex-start;
+}
+
+#plaatje-meerinfo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+    border: 5px solid black;
+}
+
+.home-btn{
+    background-color: rgb(1, 106, 226);
+    cursor: pointer;
+}
+
+/* einde meerinfo, begin wijzigen page */
+
+.update-text{
+    border: 1px solid black;
+    width: 100%;
+    height: 40px;
+}
+
+.update-text-groot{
+    border: 1px solid black;
+    width: 100%;
+    height: 80px;
+}
+
+#error{
+    color: red !important;
+    font-weight: 600;
+}
+
+/* einde wijzigen page, begin insert toevoegen page */
+
+#normal-tekst{
+    font-family: "Poppins", sans-serif !important;
+    color: rgb(110, 110, 110);
+}
+
+.opslaan-knop{
+    transition: 0.2s;
+    background-color: rgb(82, 135, 242);
+    padding: 5px;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+     &:hover {
+        background-color: rgb(27, 80, 187);
+    }
+}
